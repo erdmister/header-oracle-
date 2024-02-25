@@ -1,0 +1,64 @@
+:root {
+    /* Paleta de colores */
+    --fondo: #e3e7f5;
+    --colorLogo: #0a3871;
+}
+html {
+    /* 1 rem es igual a 10 px */
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+*, *::before, *::after {
+    box-sizing: inherit;
+    margin: 0; /* Elimina los márgenes */
+    padding: 0; /* Elimina los rellenos */
+}
+body {
+    background-color: var(--fondo); /* Utiliza la variable de color */
+}
+
+
+/* Globales */
+h1 {
+    font-size: 4rem;
+    text-align: center;
+}
+
+
+/* Utilidades */
+.centrar-texto {
+    text-align: center;
+}
+
+
+/* Header */
+.contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+    h1 {
+        color: var(--colorLogo);
+    }
+}
+@media (min-width: 768px) { /* tablet */
+    .contenedor {
+        flex-direction: inherit;
+    }
+
+    .contenedor h1 {
+        margin: 1rem auto; /* Para centrar horizontalmente el h1 */
+    }
+}
+
+
+/* Main */
+.texto-normal textarea{
+    width: 300px; /* Ancho del textarea */
+    height: 150px; /* Alto del textarea */
+    resize: none; /* Evita que el usuario pueda redimensionar el textarea */
+    background-color: transparent; /* Hace que el textarea sea transparente */
+    border: none; /* Elimina el borde */
+    margin: 0; /* Elimina los márgenes */
+    padding: 0; /* Elimina el relleno */
+}
